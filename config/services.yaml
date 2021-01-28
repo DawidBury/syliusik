@@ -42,3 +42,8 @@ services:
                 label: "Parcel",
                 form_type: App\Form\Type\ParcelShippingCalculatorType
             }
+                
+    app.form.extension.type.product_type:
+        class: App\Form\Type\ProductTypeExtension
+        tags: 
+            - { name: form.type_extension, extended_type: Sylius\Bundle\ProductBundle\Form\Type }
